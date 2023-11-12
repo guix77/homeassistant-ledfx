@@ -16,6 +16,12 @@ Platform | Description
 -- | --
 `media_player` | Set LedFx on play or pause.
 
+This integration only allows to set LedFx on play or on pause, which is my only personal use case. I have a lots of WLEDs at home and I want to be able to use them in other ways than LedFx (HA, Hyperion, ...), and I was fed up with opening the LedFx UI to set pause or play.
+
+This integration is not meant at all to re-create https://github.com/dmamontov/hass-ledfx which has unfortunately been broken for a while now.
+
+PRs are welcome if you need something else and can code it.
+
 ## Installation
 
 1. Using the tool of choice open the directory (folder) for your HA configuration (where you find `configuration.yaml`).
