@@ -4,7 +4,7 @@
 [![GitHub Activity][commits-shield]][commits]
 [![License][license-shield]](LICENSE)
 
-![Project Maintenance][maintenance-shield]
+<!-- ![Project Maintenance][maintenance-shield] -->
 [![BuyMeCoffee][buymecoffeebadge]][buymecoffee]
 
 [![Discord][discord-shield]][discord]
@@ -48,6 +48,6 @@ If you want to contribute to this please read the [Contribution guidelines](CONT
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg?style=for-the-badge
 [forum]: https://community.home-assistant.io/
 [license-shield]: https://img.shields.io/github/license/guix77/ledfx.svg?style=for-the-badge
-[maintenance-shield]: https://img.shields.io/badge/maintainer.svg?style=for-the-badge
+<!-- [maintenance-shield]: https://img.shields.io/badge/maintainer.svg?style=for-the-badge -->
 [releases-shield]: https://img.shields.io/github/release/guix77/ledfx.svg?style=for-the-badge
 [releases]: https://github.com/guix77/homeassistant-ledfx/releases
