@@ -1,4 +1,4 @@
-# LedFx
+# Home Assistant LedFx
 
 [![GitHub Release][releases-shield]][releases]
 [![GitHub Activity][commits-shield]][commits]
@@ -6,11 +6,9 @@
 
 <!-- ![Project Maintenance][maintenance-shield] -->
 [![BuyMeCoffee][buymecoffeebadge]][buymecoffee]
-
-[![Discord][discord-shield]][discord]
-[![Community Forum][forum-shield]][forum]
-
-_Integration to integrate with [ledfx][ledfx]._
+<!--  -->
+<!-- [![Discord][discord-shield]][discord]
+[![Community Forum][forum-shield]][forum] -->
 
 **This integration will set up the following platforms.**
 
