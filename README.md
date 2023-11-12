@@ -38,14 +38,14 @@ If you want to contribute to this please read the [Contribution guidelines](CONT
 
 [buymecoffee]: https://www.buymeacoffee.com/guix77
 [buymecoffeebadge]: https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg?style=for-the-badge
-[commits-shield]: https://img.shields.io/github/commit-activity/y/guix77/ledfx.svg?style=for-the-badge
+[commits-shield]: https://img.shields.io/github/commit-activity/y/guix77/homeassistant-ledfx.svg?style=for-the-badge
 [commits]: https://github.com/guix77/homeassistant-ledfx/commits/main
 [discord]: https://discord.gg
 [discord-shield]: https://img.shields.io/discord/330944238910963714.svg?style=for-the-badge
 [exampleimg]: example.png
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg?style=for-the-badge
 [forum]: https://community.home-assistant.io/
-[license-shield]: https://img.shields.io/github/license/guix77/ledfx.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/guix77/homeassistant-ledfx.svg?style=for-the-badge
 <!-- [maintenance-shield]: https://img.shields.io/badge/maintainer.svg?style=for-the-badge -->
-[releases-shield]: https://img.shields.io/github/release/guix77/ledfx.svg?style=for-the-badge
+[releases-shield]: https://img.shields.io/github/release/guix77/homeassistant-ledfx.svg?style=for-the-badge
 [releases]: https://github.com/guix77/homeassistant-ledfx/releases
