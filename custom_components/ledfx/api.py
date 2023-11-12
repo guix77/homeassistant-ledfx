@@ -29,28 +29,44 @@ class LedfxApiClient:
 
     def __init__(
         self,
-        username: str,
-        password: str,
+        host: str,
+        port: int,
         session: aiohttp.ClientSession,
     ) -> None:
         """Sample API Client."""
-        self._username = username
-        self._password = password
+        self._host = host
+        self._port = port
         self._session = session
 
     async def async_get_data(self) -> any:
         """Get data from the API."""
+        data = {}
+        data["info"] = await self._api_wrapper(
+            method="get",
+            url=f"http://{self._host}:{self._port}/api/info"
+        )
+        data["scenes"] = await self._api_wrapper(
+            method="get",
+            url=f"http://{self._host}:{self._port}/api/scenes"
+        )
+        data["virtuals"] = await self._api_wrapper(
+            method="get",
+            url=f"http://{self._host}:{self._port}/api/virtuals"
+        )
+        return data
+
+    async def async_get_info(self) -> any:
+        """Get information about LedFx."""
         return await self._api_wrapper(
-            method="get", url="https://jsonplaceholder.typicode.com/posts/1"
+            method="get",
+            url=f"http://{self._host}:{self._port}/api/info"
         )
 
-    async def async_set_title(self, value: str) -> any:
-        """Get data from the API."""
+    async def async_toggle_pause(self) -> any:
+        """Toggle pause."""
         return await self._api_wrapper(
-            method="patch",
-            url="https://jsonplaceholder.typicode.com/posts/1",
-            data={"title": value},
-            headers={"Content-type": "application/json; charset=UTF-8"},
+            method="put",
+            url=f"http://{self._host}:{self._port}/api/virtuals"
         )
 
     async def _api_wrapper(
@@ -60,7 +76,7 @@ class LedfxApiClient:
         data: dict | None = None,
         headers: dict | None = None,
     ) -> any:
-        """Get information from the API."""
+        """Make the request."""
         try:
             async with async_timeout.timeout(10):
                 response = await self._session.request(
