@@ -2,7 +2,7 @@
     "config": {
         "step": {
             "user": {
-                "description": "If you need help with the configuration have a look here: https://github.com/guix77/ledfx",
+                "description": "If you need help with the configuration have a look here: https://github.com/guix77/homeassistant-ledfx",
                 "data": {
                     "host": "Host",
                     "port": "Port"

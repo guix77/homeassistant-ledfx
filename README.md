@@ -41,7 +41,7 @@ If you want to contribute to this please read the [Contribution guidelines](CONT
 [buymecoffee]: https://www.buymeacoffee.com/guix77
 [buymecoffeebadge]: https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg?style=for-the-badge
 [commits-shield]: https://img.shields.io/github/commit-activity/y/guix77/ledfx.svg?style=for-the-badge
-[commits]: https://github.com/guix77/ledfx/commits/main
+[commits]: https://github.com/guix77/homeassistant-ledfx/commits/main
 [discord]: https://discord.gg
 [discord-shield]: https://img.shields.io/discord/330944238910963714.svg?style=for-the-badge
 [exampleimg]: example.png
@@ -50,4 +50,4 @@ If you want to contribute to this please read the [Contribution guidelines](CONT
 [license-shield]: https://img.shields.io/github/license/guix77/ledfx.svg?style=for-the-badge
 [maintenance-shield]: https://img.shields.io/badge/maintainer.svg?style=for-the-badge
 [releases-shield]: https://img.shields.io/github/release/guix77/ledfx.svg?style=for-the-badge
-[releases]: https://github.com/guix77/ledfx/releases
+[releases]: https://github.com/guix77/homeassistant-ledfx/releases
