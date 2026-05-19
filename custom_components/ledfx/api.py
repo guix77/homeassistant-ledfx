@@ -1,4 +1,4 @@
-"""Sample API Client."""
+"""LedFx API Client."""
 from __future__ import annotations
 
 import asyncio
@@ -25,7 +25,7 @@ class LedfxApiClientAuthenticationError(
 
 
 class LedfxApiClient:
-    """Sample API Client."""
+    """LedFx API Client."""
 
     def __init__(
         self,
@@ -33,40 +33,43 @@ class LedfxApiClient:
         port: int,
         session: aiohttp.ClientSession,
     ) -> None:
-        """Sample API Client."""
+        """Initialize."""
         self._host = host
         self._port = port
         self._session = session
 
+    def _url(self, path: str) -> str:
+        return f"http://{self._host}:{self._port}{path}"
+
     async def async_get_data(self) -> any:
         """Get data from the API."""
-        data = {}
-        data["info"] = await self._api_wrapper(
-            method="get",
-            url=f"http://{self._host}:{self._port}/api/info"
-        )
-        data["scenes"] = await self._api_wrapper(
-            method="get",
-            url=f"http://{self._host}:{self._port}/api/scenes"
-        )
-        data["virtuals"] = await self._api_wrapper(
-            method="get",
-            url=f"http://{self._host}:{self._port}/api/virtuals"
-        )
-        return data
+        return {
+            "info": await self._api_wrapper(method="get", url=self._url("/api/info")),
+            "scenes": await self._api_wrapper(method="get", url=self._url("/api/scenes")),
+        }
 
-    async def async_get_info(self) -> any:
-        """Get information about LedFx."""
+    async def async_activate_device(self, virtual_id: str) -> any:
+        """Trigger resolve_address + activate on a device."""
         return await self._api_wrapper(
-            method="get",
-            url=f"http://{self._host}:{self._port}/api/info"
+            method="post",
+            url=self._url(f"/api/devices/{virtual_id}"),
+            data={},
         )
 
-    async def async_toggle_pause(self) -> any:
-        """Toggle pause."""
+    async def async_activate_scene(self, scene_id: str) -> any:
+        """Activate a scene."""
         return await self._api_wrapper(
             method="put",
-            url=f"http://{self._host}:{self._port}/api/virtuals"
+            url=self._url("/api/scenes"),
+            data={"id": scene_id, "action": "activate"},
+        )
+
+    async def async_deactivate_scene(self, scene_id: str) -> any:
+        """Deactivate a scene."""
+        return await self._api_wrapper(
+            method="put",
+            url=self._url("/api/scenes"),
+            data={"id": scene_id, "action": "deactivate"},
         )
 
     async def _api_wrapper(

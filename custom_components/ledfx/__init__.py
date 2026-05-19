@@ -15,7 +15,7 @@ from .const import DOMAIN
 from .coordinator import LedfxDataUpdateCoordinator
 
 PLATFORMS: list[Platform] = [
-    Platform.MEDIA_PLAYER
+    Platform.SWITCH
 ]
 
 

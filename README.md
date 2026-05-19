@@ -14,9 +14,9 @@
 
 Platform | Description
 -- | --
-`media_player` | Set LedFx on play or pause.
+`switch` | One switch per LedFx scene — turn on to activate, turn off to release the WLED devices.
 
-This integration only allows to set LedFx on play or on pause, which is my only personal use case. I have a lots of WLEDs at home and I want to be able to use them in other ways than LedFx (HA, Hyperion, ...), and I was fed up with opening the LedFx UI to set pause or play.
+This integration exposes each LedFx scene as a switch in Home Assistant. I have a lot of WLEDs at home and I want to be able to switch between LedFx scenes directly from HA, and to release the devices so they can be used by other software (Hyperion, plain HA, ...) without having to open the LedFx UI.
 
 This integration is not meant at all to re-create https://github.com/dmamontov/hass-ledfx which has unfortunately been broken for a while now.
 
